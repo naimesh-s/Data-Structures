@@ -3,7 +3,7 @@ package com.ds.linkedlist;
 public class SinglyLinkedList {
 	
 	private Node head;
-	private static int size;
+	private int size;
 	
 	public int getSize() {
 		return size;
@@ -119,7 +119,7 @@ public class SinglyLinkedList {
 			return null;
 		}
 		
-		Object[] values = new Object[size];
+		Object[] values = new Object[list.getSize()];
 		int i = 0;
 		
 		while(currentNode.getNextNode() != null) {
