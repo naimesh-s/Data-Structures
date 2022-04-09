@@ -98,6 +98,20 @@ public class SinglyLinkedList {
 		size--;
 	}
 	
+	public void reverse() {
+		Node prevNode = null;
+		Node nextNode = this.head;
+		Node currentNode = this.head;
+		
+		while(nextNode != null) {
+			nextNode = nextNode.getNextNode();
+			currentNode.setNextNode(prevNode);
+			prevNode = currentNode;
+			currentNode = nextNode;
+		}
+		this.head = prevNode;
+	}
+	
 	public static Object[] displayList(SinglyLinkedList list) {
 		Node currentNode = list.head;
 		

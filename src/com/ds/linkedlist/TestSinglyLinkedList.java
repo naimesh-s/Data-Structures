@@ -13,7 +13,7 @@ public class TestSinglyLinkedList {
 		for(Object obj : SinglyLinkedList.displayList(list)) {
 			System.out.println(obj);
 		}
-		
+		System.out.println("Size before removing >> "+ list.getSize());
 //		list.removeFirst();
 //		
 //		System.out.println("After removing first element from list");
@@ -28,12 +28,20 @@ public class TestSinglyLinkedList {
 //			System.out.println(obj);
 //		}
 		
-		list.remove(20);
+//		list.remove(200);
+//		
+//		System.out.println("After removing element from list");
+//		for(Object obj : SinglyLinkedList.displayList(list)) {
+//			System.out.println(obj);
+//		}
+//		System.out.println("Size after removing >> "+ list.getSize());
 		
-		System.out.println("After removing element from list");
+		System.out.println("\nAfter reversing list\n");
+		list.reverse();
 		for(Object obj : SinglyLinkedList.displayList(list)) {
 			System.out.println(obj);
 		}
+		System.out.println("Size after reversing >> "+ list.getSize());
 	}
 
 }
