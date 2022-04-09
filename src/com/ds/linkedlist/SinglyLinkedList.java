@@ -1,14 +1,27 @@
 package com.ds.linkedlist;
 
+/**
+ * Singly LinkedList
+ * @author naimesh.shah
+ *
+ */
 public class SinglyLinkedList {
 	
 	private Node head;
 	private int size;
 	
+	/**
+	 * Get size of LinkedList.
+	 * @return
+	 */
 	public int getSize() {
 		return size;
 	}
 
+	/**
+	 * Insert Data to Singly LinkedList.
+	 * @param data
+	 */
 	public void insert(Object data) {
 		Node node = new Node(data);
 		if(head == null) {
@@ -23,6 +36,11 @@ public class SinglyLinkedList {
 		size++;
 	}
 	
+	/**
+	 * Insert data to Singly LinkedList at specific location/position.
+	 * @param data
+	 * @param location
+	 */
 	public void insertAt(Object data, int location) {
 		if(location > 0 && location <= size) {
 			Node node = new Node(data);
@@ -40,6 +58,10 @@ public class SinglyLinkedList {
 		size++;
 	}
 	
+	/**
+	 * Remove element from Singly LinkedList.
+	 * @param o
+	 */
 	public void remove(Object o) {
 		if(o != null) {
 			Node prev = null;
@@ -67,6 +89,9 @@ public class SinglyLinkedList {
 		}
 	}
 	
+	/**
+	 * Remove first element from the Singly LinkedList.
+	 */
 	public void removeFirst() {
 		if(this.head == null) {
 			System.out.println("List is empty. Please insert element to remove. Use insert(Object obj) method to insert!");
@@ -80,6 +105,9 @@ public class SinglyLinkedList {
 		size--;
 	}
 	
+	/**
+	 * Remove last element from Singly LinkedList.
+	 */
 	public void removeLast() {
 		if(this.head == null) {
 			System.out.println("List is empty. Please insert element to remove. Use insert(Object obj) method to insert!");
@@ -98,6 +126,9 @@ public class SinglyLinkedList {
 		size--;
 	}
 	
+	/**
+	 * Reverse Singly LinkedList.
+	 */
 	public void reverse() {
 		Node prevNode = null;
 		Node nextNode = this.head;
@@ -112,6 +143,11 @@ public class SinglyLinkedList {
 		this.head = prevNode;
 	}
 	
+	/**
+	 * Display elements of Singly LinkedList.
+	 * @param list
+	 * @return
+	 */
 	public static Object[] displayList(SinglyLinkedList list) {
 		Node currentNode = list.head;
 		
